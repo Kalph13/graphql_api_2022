@@ -35,14 +35,14 @@ export const getMovie = async (id) => {
 export const getSuggestions = async (id) => {
     const {
         data: {
-            data: { suggestions }
+            data: { movies }
         }
     } = await axios(MOVIE_SUGGESTIONS_URL, {
         params: {
             movie_id: id
         }
     });
-    return suggestions;
+    return movies;
 };
 
 /* yarn add node-fetch@2.6.1 */
